@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    test_my_site |  白蘋渡口
+    Ubuntu配置 |  白蘋渡口
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -31,7 +31,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-test-my-site" class="article article-type-post" itemscope
+  <article id="post-Ubuntu配置" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -39,7 +39,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  test_my_site
+  Ubuntu配置
 </h1>
   
 
@@ -48,12 +48,12 @@
 
     
     <div class="article-meta">
-      <a href="/2020/02/29/test-my-site/" class="article-date">
-  <time datetime="2020-02-28T18:28:30.000Z" itemprop="datePublished">2020-02-29</time>
+      <a href="/2020/02/29/Ubuntu%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-02-29T08:28:55.000Z" itemprop="datePublished">2020-02-29</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
   </div>
 
       
@@ -63,7 +63,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">0字</span>
+            <span class="post-count">621字</span>
         </span>
     </span>
 
@@ -72,7 +72,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">3分钟</span>
         </span>
     </span>
 </div>
@@ -83,6 +83,8 @@
 
     
     
+    <div class="tocbot"></div>
+
 
 
 
@@ -97,7 +99,46 @@
       
 
       
-      
+      <p>经常重装ubuntu。<br>每次都得自己上网找教程。<br>也挺烦的。<br>给自己留一个教程吧。<br>打开了ubuntu了。<br>首先把什么libreoffice卸掉。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove libreoffice-calc</span><br><span class="line">sudo apt remove libreoffice-draw</span><br><span class="line">sudo apt remove libreoffice-impress</span><br><span class="line">sudo apt remove libreoffice-writer</span><br><span class="line">sudo apt remove libreoffice*</span><br><span class="line">sudo apt  purge libreoffice*</span><br><span class="line">sudo  apt  autoremove</span><br></pre></td></tr></table></figure>
+<p>还有f××king的amazon。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove unity-webapps-common</span><br><span class="line"></span><br><span class="line">sudo apt purge thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-sudoku transmission-common gnome-orca webbrowser-app landscape-client-ui-install</span><br></pre></td></tr></table></figure>
+<p>接下来最重要的就是换源了。<br>打开这个源文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi  &#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure>
+<p>复制源进去<br>直接查询。<br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</a><br>进入这个网址查询自己版本的源。<br>之后更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<p>创建一个root用户吧。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+<p>之后直接输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br></pre></td></tr></table></figure>
+
+<p>进入root用户就不需要频繁的输入密码了。<br>####开始安装常用软件<br>网易云音乐。<br><a href="http://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb" target="_blank" rel="noopener">http://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb</a><br>搜狗输入法。<br><a href="http://cdn2.ime.sogou.com/dl/index/1571302197/sogoupinyin_2.3.1.0112_amd64.deb?st=YJYXcfmbb5aENeoaKG85wQ&amp;e=1571926682&amp;fn=sogoupinyin_2.3.1.0112_amd64.deb" target="_blank" rel="noopener">http://cdn2.ime.sogou.com/dl/index/1571302197/sogoupinyin_2.3.1.0112_amd64.deb?st=YJYXcfmbb5aENeoaKG85wQ&amp;e=1571926682&amp;fn=sogoupinyin_2.3.1.0112_amd64.deb</a><br>（安装的时候老崩，安装完但是重启就OK了）<br>wps<br><a href="https://www.wps.cn/product/wpslinux/#" target="_blank" rel="noopener">https://www.wps.cn/product/wpslinux/#</a></p>
+<p>安装Git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<p>安装Vim</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim</span><br></pre></td></tr></table></figure>
+<p>chrome的源，使用apt安装</p>
+<p>1、将下载源加入到系统的源列表（添加依赖）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https:&#x2F;&#x2F;repo.fdzh.org&#x2F;chrome&#x2F;google-chrome.list -P &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;</span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line">2、导入谷歌软件的公钥，用于对下载软件进行验证。</span><br></pre></td></tr></table></figure>
+<p>wget -q -O - <a href="https://dl.google.com/linux/linux_signing_key.pub" target="_blank" rel="noopener">https://dl.google.com/linux/linux_signing_key.pub</a>  | sudo apt-key add -</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、用于对当前系统的可用更新列表进行更新。（更新依赖）</span><br></pre></td></tr></table></figure>
+<p>sudo apt-get update</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、谷歌 Chrome 浏览器（稳定版）的安装。（安装软件）</span><br></pre></td></tr></table></figure>
+<p>sudo apt-get install google-chrome-stable</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 5、启动谷歌 Chrome 浏览器。 &#x2F;usr&#x2F;bin&#x2F;google-chrome-stable 然后添加到状态栏即可</span><br><span class="line"></span><br><span class="line">安装typora</span><br></pre></td></tr></table></figure>
+<h1 id="or-run"><a href="#or-run" class="headerlink" title="or run:"></a>or run:</h1><h1 id="sudo-apt-key-adv-–keyserver-keyserver-ubuntu-com-–recv-keys-BA300B7755AFCFAE"><a href="#sudo-apt-key-adv-–keyserver-keyserver-ubuntu-com-–recv-keys-BA300B7755AFCFAE" class="headerlink" title="sudo apt-key adv –keyserver keyserver.ubuntu.com –recv-keys BA300B7755AFCFAE"></a>sudo apt-key adv –keyserver keyserver.ubuntu.com –recv-keys BA300B7755AFCFAE</h1><p>wget -qO - <a href="https://typora.io/linux/public-key.asc" target="_blank" rel="noopener">https://typora.io/linux/public-key.asc</a> | sudo apt-key add -</p>
+<h1 id="add-Typora’s-repository"><a href="#add-Typora’s-repository" class="headerlink" title="add Typora’s repository"></a>add Typora’s repository</h1><p>sudo add-apt-repository ‘deb <a href="https://typora.io/linux" target="_blank" rel="noopener">https://typora.io/linux</a> ./‘<br>sudo apt-get update</p>
+<h1 id="install-typora"><a href="#install-typora" class="headerlink" title="install typora"></a>install typora</h1><p>sudo apt-get install typora</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">美化界面安装</span><br><span class="line">https:&#x2F;&#x2F;blog.csdn.net&#x2F;YuYunTan&#x2F;article&#x2F;details&#x2F;85052956</span><br><span class="line"></span><br><span class="line">先安装主题管理工具，后面都是按此来切换的。</span><br></pre></td></tr></table></figure>
+<p> sudo apt-get install unity-tweak-tool</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">扁平化主题</span><br><span class="line">Arc Theme主题</span><br><span class="line">主题</span><br></pre></td></tr></table></figure>
+<p>sudo add-apt-repository ppa:noobslab/themes<br>sudo apt-get update<br>sudo apt-get install arc-theme</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">配套图标</span><br></pre></td></tr></table></figure>
+<p>sudo add-apt-repository ppa:noobslab/icons<br>sudo apt-get update<br>sudo apt-get install arc-icons</p>
+<p>```</p>
+<p>sudo apt-get install flashplugin-installer</p>
+
       
       <!-- reward -->
       
@@ -166,14 +207,14 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://supermin963.github.io/2020/02/29/test-my-site/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://supermin963.github.io/2020/02/29/Ubuntu%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/water/" rel="tag">water</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/star/" rel="tag">star</a></li></ul>
 
 
     </footer>
@@ -184,19 +225,10 @@
   
   <nav class="article-nav">
     
+    
       <a href="/2020/02/29/%E7%BB%88%E4%BA%8E%E5%BB%BA%E5%A5%BD%E5%8D%9A%E5%AE%A2%E4%BA%86/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            终于建好博客了
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2020/02/29/hello-world/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
+        <div class="article-nav-title">终于建好博客了</div>
       </a>
     
   </nav>
